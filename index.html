@@ -25,6 +25,23 @@
 
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <style>
+        .show_logo {
+            width: 120px;
+        }
+
+        @media (max-width: 768px) {
+            .show_logo {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .show_logo {
+                width: 65px;
+            }
+        }
+    </style>
 </head>
 
 <body class="index-page">
@@ -32,10 +49,8 @@
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <h1 class="sitename">
-                    One Stop Moment
-                </h1>
+            <a href="index.html" class="d-flex align-items-center me-auto">
+                <img src="assets/image/Logo.png" class="show_logo">
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -1074,10 +1089,10 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename">One Stop Moment</span>
+                    <a href="index.html" class="d-flex align-items-center">
+                        <img src="assets/image/Logo.png" class="show_logo">
                     </a>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
+                    <p style="margin-top: 10px;">Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
                         valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -1130,11 +1145,11 @@
         <div class="container copyright text-center mt-4">
             <p>©
                 <span>Copyright</span>
-                <strong class="px-1 sitename">Onestopmoment</strong>
+                <strong class="px-1 sitename">2025 Onestopmoment</strong>
                 <span>All Rights Reserved</span>
             </p>
             <div class="credits">
-                Desain By <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Dibuat Oleh : OneStopMoment
             </div>
         </div>
 
