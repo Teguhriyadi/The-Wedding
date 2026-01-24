@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>The Wedding | Undangan Digital</title>
+    <title>One Stop Moment | Undangan Digital</title>
     <link rel="icon" href="favico-om.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -672,6 +672,57 @@
                 font-size: 1rem;
             }
         }
+
+        .pricing-demo {
+            border-radius: 18px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .pricing-demo img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            transition: 0.45s ease;
+        }
+
+        .pricing-demo::after {
+            content: "🔍 Lihat Demo";
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 110, 253, 0.75);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.45s ease;
+        }
+
+        .pricing-demo:hover img {
+            transform: scale(1.1);
+        }
+
+        .pricing-demo:hover::after {
+            opacity: 1;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.08);
+            z-index: 2;
+            border: 3px solid #0d6efd;
+            box-shadow: 0 30px 70px rgba(13, 110, 253, 0.35);
+        }
+
+        @media (max-width: 991.98px) {
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -975,31 +1026,43 @@
 
     <section id="harga" class="pricing-section py-5">
         <div class="container">
+
             <!-- TITLE -->
             <div class="text-center mb-5">
                 <span class="pricing-badge">💸 Paket Undangan</span>
                 <h2 class="fw-bold mt-3">
                     Pilih Paket yang <span class="text-gradient">Cocok Buat Kamu</span>
                 </h2>
-                <p class="text-muted mt-2">Simple sampai premium, tinggal pilih ✨</p>
+                <p class="text-muted mt-2">
+                    Lihat demo dulu, baru pilih ✨
+                </p>
             </div>
 
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center align-items-stretch">
+
                 <!-- BASIC -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 order-2 order-lg-1">
                     <div class="pricing-card basic">
-                        <div class="pricing-header">
-                            <h4>Basic</h4>
-                            <p>Buat yang simpel tapi elegan</p>
+
+                        <div class="pricing-demo">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+                                alt="Demo Undangan Basic">
                         </div>
 
-                        <div class="pricing-price"><span>Rp</span>99K</div>
+                        <div class="pricing-header">
+                            <h4>Basic</h4>
+                            <p>Buat yang simpel & to the point</p>
+                        </div>
+
+                        <div class="pricing-price">
+                            <span>Rp</span>99K
+                        </div>
 
                         <ul class="pricing-list">
-                            <li>✨ 1 Halaman Undangan</li>
-                            <li>📱 Mobile Friendly</li>
-                            <li>🔗 Link Undangan</li>
-                            <li>❌ Tanpa Musik</li>
+                            <li>✨ 1 halaman undangan</li>
+                            <li>📱 Mobile friendly</li>
+                            <li>🔗 Link undangan</li>
+                            <li>❌ Tanpa musik</li>
                         </ul>
 
                         <a href="#order" class="btn btn-outline-primary rounded-pill w-100">
@@ -1008,23 +1071,31 @@
                     </div>
                 </div>
 
-                <!-- PREMIUM -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="pricing-card premium">
+                <!-- PREMIUM (BEST SELLER) -->
+                <div class="col-md-6 col-lg-4 order-1 order-lg-2">
+                    <div class="pricing-card featured premium">
+
                         <div class="best-badge">🔥 Best Seller</div>
+
+                        <div class="pricing-demo">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552"
+                                alt="Demo Undangan Premium">
+                        </div>
 
                         <div class="pricing-header">
                             <h4>Premium</h4>
-                            <p>Paling favorit Gen-Z</p>
+                            <p>Paling favorit Gen-Z 💖</p>
                         </div>
 
-                        <div class="pricing-price highlight"><span>Rp</span>199K</div>
+                        <div class="pricing-price highlight">
+                            <span>Rp</span>199K
+                        </div>
 
                         <ul class="pricing-list">
-                            <li>✨ Multi Halaman</li>
-                            <li>🎵 Musik & Animasi</li>
+                            <li>🔥 Multi halaman</li>
+                            <li>🎵 Musik & animasi</li>
                             <li>📍 RSVP & Google Maps</li>
-                            <li>🎨 Custom Tema</li>
+                            <li>🎨 Custom tema</li>
                         </ul>
 
                         <a href="#order" class="btn btn-primary rounded-pill w-100">
@@ -1032,6 +1103,38 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- EXCLUSIVE -->
+                <div class="col-md-6 col-lg-4 order-3">
+                    <div class="pricing-card exclusive">
+
+                        <div class="pricing-demo">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"
+                                alt="Demo Undangan Exclusive">
+                        </div>
+
+                        <div class="pricing-header">
+                            <h4>Exclusive</h4>
+                            <p>Buat yang pengen all out ✨</p>
+                        </div>
+
+                        <div class="pricing-price">
+                            <span>Rp</span>299K
+                        </div>
+
+                        <ul class="pricing-list">
+                            <li>👑 Semua fitur Premium</li>
+                            <li>🎥 Video opening</li>
+                            <li>🖼️ Galeri unlimited</li>
+                            <li>💬 Support prioritas</li>
+                        </ul>
+
+                        <a href="#order" class="btn btn-outline-primary rounded-pill w-100">
+                            Paket Sultan 👑
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
